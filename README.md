@@ -92,18 +92,56 @@ You can:
 ## 📂 Project Structure
 ```bash
 netflix-clone/
-├── templates/
-│   ├── index.html
-│   ├── login.html
-│   └── movie_detail.html
-├── static/
+│
+├── core/                        # Django App
+│   ├── migrations/              # DB migrations
+│   │   └── __init__.py
+│   ├── __init__.py
+│   ├── admin.py                 # Admin model registration
+│   ├── apps.py
+│   ├── models.py                # Movie model, genres
+│   ├── views.py                 # View logic (index, search, genre, my_list)
+│   ├── urls.py                  # App-specific URL patterns
+│   └── tests.py
+│
+├── netflix_site/               # Django Project (Main config)
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py              # Installed apps, database, static/media settings
+│   ├── urls.py                  # Root URLConf
+│   └── wsgi.py
+│
+├── templates/                   # HTML Templates
+│   ├── index.html               # Homepage
+│   ├── login.html               # Login page
+│   ├── signup.html              # Signup page
+│   ├── movie.html               # Movie play/details page
+│   ├── my_list.html             # Watchlist
+│   ├── search.html              # Search result page
+│   └── genre.html               # Genre-filtered movie list
+│
+├── static/                      # Static files (CSS, JS, images)
 │   ├── css/
-│   └── js/
-├── movies/
-│   ├── models.py
-│   ├── views.py
-│   └── urls.py
-└── manage.py
+│   │   └── style.css
+│   ├── js/
+│   │   └── app.js
+│   └── images/
+│       └── logo.png
+│
+├── media/                       # Uploaded movie images/videos
+│   └── movie_images/
+│       ├── cover1.jpg
+│       └── trailer1.mp4
+│
+├── assets/                      # Screenshots for README
+│   └── homepage.png
+│
+├── db.sqlite3                   # (If using SQLite for demo)
+├── manage.py
+├── README.md                    # GitHub project documentation
+├── .gitignore                   # Git ignore file
+└── requirements.txt             # Python dependencies
+
 ```
 ---
 ## 💡 Future Improvements
@@ -113,10 +151,10 @@ netflix-clone/
 - 📧 Email-based user registration & verification
 ---
 ## 🙋‍♂️ Author
-Praveen Kumar Gone
-🧑‍💻 Aspiring Python Backend Developer
-📧[praveenkumargone229@gmail.com]
-🌐[www.linkedin.com/in/gonepraveen]
+- Praveen Kumar Gone
+- 🧑‍💻 Aspiring Python Backend Developer
+- 📧[praveenkumargone229@gmail.com]
+- 🌐[www.linkedin.com/in/gonepraveen]
 
 ## License
 This project is for educational and personal portfolio use only.
