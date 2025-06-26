@@ -40,4 +40,11 @@ This project includes movie browsing by genre, search, a “My List” feature, 
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/netflix-clone-django.git
-cd netflix-clone-django
+cd netflix-clone-django 
+```
+### 2. Create and Activate Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
