@@ -30,7 +30,7 @@ This project includes movie browsing by genre, search, a “My List” feature, 
 
 ## 📸 Screenshots
 
-![Netflix Homepage UI](assets/Screenshot2025-06-26091333.png)
+![Netflix Homepage UI](static/assets/Screenshot2025-06-26091333.png)
 
 ---
 
