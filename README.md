@@ -48,3 +48,34 @@ cd netflix-clone-django
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 4. Setup PostgreSQL
+Create a database named netflix_clone
+In settings.py, update:
+```bash
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'netflix_clone',
+        'USER': 'your_db_user',
+        'PASSWORD': 'your_db_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+### 5. Run Migrations & Create Superuser
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+```
+### 6. Start the Server
+
+```bash
+python manage.py runserver
+```
